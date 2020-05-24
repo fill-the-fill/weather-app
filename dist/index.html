@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/92cbda4984.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">    <title>Welcome To My Portfolio</title>
+
+    <title>Weather App</title>
+</head>
+<body>
+<header>
+    <div id="inputSearch">
+        <input id="cityInput" type="text" placeholder="Which City?" />
+        <span id="searchCity"><i class="fas fa-search"></i></span>
+    </div>
+</header>
+
+    <div id="cityData"></div>
+
+    <script id="city-template" type="text/x-handlebars-template">
+      {{#each data}}
+          <div class="city">
+            {{#if _id}}
+            <div class="delete"><i class="fas fa-window-close"></i></div>
+            {{else}}
+            <div class="save"><i class="fas fa-plus-square"></i></div>
+            {{/if}}
+            <p class="name">{{name}}</p>
+            <p class="condition">{{condition}}</p>
+            <p class="temperature">{{temperature}}<span>°c</span></p>
+              <img src="http://openweathermap.org/img/wn/{{picture}}@2x.png">
+          </div>
+      {{/each}}
+    </script>
+
+    <script src="/handlebars/dist/handlebars.js"></script>
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="render.js"></script>
+    <script src="tempManager.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

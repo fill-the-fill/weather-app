@@ -1,0 +1,22 @@
+{
+  "name": "weather-app-new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "render.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.6",
+    "jquery": "^3.5.1",
+    "json": "^9.0.6",
+    "mongoose": "^5.9.13",
+    "nodemon": "^2.0.3",
+    "render": "^0.1.4"
+  }
+}
